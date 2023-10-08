@@ -18,18 +18,18 @@ Reg.no:  212222100022
 
 ```
 ```
-SQL> create table employeee(empid number,empname varchar (20), dept varchar (10) ,salary number);
+ create table empl(empid number,empname varchar (20), dept varchar (10) ,salary number);
 
 Table created.
 
-SQL> create or replace procedure insert_employeee_data AS
+SQL> create or replace procedure insert_empl_data AS
   2  begin
-  3  insert into employeee (empid,empname,dept,salary)
-  4  values (1,'NANDHA','MD',1000000);
-  5  insert into employeee (empid,empname,dept,salary)
-  6  values (2,'ROHIT','HR',500000);
-  7  insert into employeee (empid,empname,dept,salary)
-  8  values (3,'TEJUS','IT',200000);
+  3  insert into empl (empid,empname,dept,salary)
+  4  values (1,'kavi','MD',5000000);
+  5  insert into empl (empid,empname,dept,salary)
+  6  values (2,'mithra','HR',100000);
+  7  insert into empl (empid,empname,dept,salary)
+  8  values (3,'sudhiksha','manager',200000);
   9  commit;
  10  end;
  11  /
@@ -37,16 +37,18 @@ SQL> create or replace procedure insert_employeee_data AS
 Procedure created.
 
 SQL> begin
-  2  insert_employeee_data;
+  2  insert_empl_data;
   3  end;
   4  /
 
 PL/SQL procedure successfully completed.
 
-SQL> select * from employeee;
+SQL> select * from empl;
+
+
 ```
 ### Output:
-![image](https://github.com/RKavikeerthana/Ex-No-4-Creating-Procedures-using-PL-SQL/assets/120431120/64cde36c-2489-44cf-964a-4b5987f7781f)
+![image](https://github.com/RKavikeerthana/Ex-No-4-Creating-Procedures-using-PL-SQL/assets/120431120/d8d8fb47-a524-4ad2-8aa6-fb9c98b1a531)
 
 ### Result:
 Hence the procedure using pl/sql is created successfully.
